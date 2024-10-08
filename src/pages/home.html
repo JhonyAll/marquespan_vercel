@@ -1,3 +1,34 @@
+<!-- PopUp do video institucional -->
+<div id="videoModal">
+  <div class="modal-content" style="padding: 0">
+    <div class="modal-body" style="padding: 4px">
+      <button
+        type="button"
+        class="btn btn-link btn-close"
+        id="closeBtn"
+        style="position: absolute; right: -20px; top: 5px; z-index: 2"
+      >
+        <i
+          class="icon-close"
+          style="font-size: 1.5rem; color: #fff; font-weight: 700"
+          id="fechaPopup"
+        ></i>
+      </button>
+      <video
+        id="popupVideo"
+        width="100%"
+        autoplay
+        controls
+        muted
+        loading="lazy"
+        src="./src/assets/videos/institucional_2024pt2.mp4"
+      >
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+  </div>
+</div>
+
 <!-- Hero Slider - Slider que fica no começo da home -->
 <div class="swiper-container">
   <div class="swiper-wrapper">
@@ -94,17 +125,38 @@
   <div class="events" id="eventsSlider">
     <div class="mr-3 h-100">
       <article class="article">
-        <a href="/e3-exposuper_2024_(balneario_comboriu)">
+        <a href="/sre-trade-show-2024">
           <figure>
             <img
               class="img-fluid"
-              src="./src/assets/img/noticias/expoSuperAcats.jpg"
+              src="./src/assets/img/noticias/tradeShow.jpg"
               alt="Expo Super"
               title="AGAS"
             />
           </figure>
           <div class="article-detail">
-            <h5>ExpoSuper 2024 (Balneário Comboriú)</h5>
+            <h5>34ª SRE Trade Show 2024 (Rio de Janeiro)</h5>
+            <p class="text-white">Eventos</p>
+            <span class="mt-2 d-block text-right"
+              ><i class="bi bi-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+      </article>
+    </div>
+    <div class="mr-3 h-100">
+      <article class="article">
+        <a href="/e4-expoapras_2024_(curitiba)">
+          <figure>
+            <img
+              class="img-fluid"
+              src="./src/assets/img/noticias/expoApras.jpg"
+              alt="Expo Super"
+              title="AGAS"
+            />
+          </figure>
+          <div class="article-detail">
+            <h5>ExpoApras 2024 (Curitiba)</h5>
             <p class="text-white">Eventos</p>
             <span class="mt-2 d-block text-right"
               ><i class="bi bi-arrow-right"></i>
@@ -136,38 +188,17 @@
     </div>
     <div class="mr-3 h-100">
       <article class="article">
-        <a href="/e3-exposuper_2024_(balneario_comboriu)">
+        <a href="/apas-show-2024">
           <figure>
             <img
               class="img-fluid"
-              src="./src/assets/img/noticias/expoSuperAcats.jpg"
+              src="./src/assets/img/noticias/apasShow.jpg"
               alt="Expo Super"
               title="AGAS"
             />
           </figure>
           <div class="article-detail">
-            <h5>ExpoSuper 2024 (Balneário Comboriú)</h5>
-            <p class="text-white">Eventos</p>
-            <span class="mt-2 d-block text-right"
-              ><i class="bi bi-arrow-right"></i>
-            </span>
-          </div>
-        </a>
-      </article>
-    </div>
-    <div class="mr-3 h-100">
-      <article class="article">
-        <a href="/e3-exposuper_2024_(balneario_comboriu)">
-          <figure>
-            <img
-              class="img-fluid"
-              src="./src/assets/img/noticias/expoSuperAcats.jpg"
-              alt="Expo Super"
-              title="AGAS"
-            />
-          </figure>
-          <div class="article-detail">
-            <h5>ExpoSuper 2024 (Balneário Comboriú)</h5>
+            <h5>APAS SHOW 2024 (São Paulo)</h5>
             <p class="text-white">Eventos</p>
             <span class="mt-2 d-block text-right"
               ><i class="bi bi-arrow-right"></i>
@@ -185,7 +216,7 @@
     <!-- Slider para os vídeos (vídeo grande) -->
     <div class="video-slider">
       <div>
-        <video controls>
+        <video controls muted>
           <source
             src="src\assets\videos\institucional_2024pt2.mp4"
             type="video/mp4"
@@ -194,13 +225,13 @@
         </video>
       </div>
       <div>
-        <video controls>
+        <video controls muted>
           <source src="src\assets\videos\feira.mp4" type="video/mp4" />
           Seu navegador não suporta vídeo.
         </video>
       </div>
       <div>
-        <video controls>
+        <video controls muted>
           <source src="src\assets\videos\video3.mp4" type="video/mp4" />
           Seu navegador não suporta vídeo.
         </video>

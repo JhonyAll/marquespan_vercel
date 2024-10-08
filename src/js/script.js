@@ -43,16 +43,124 @@ const closeFullMenu = () => {
 
 // Função que irá inicializar todas as demais funções correspondendo a rota de cada uma
 const start = (typePage) => {
-  AOS.init()
+  AOS.init();
+  setInterval(() => {
+    AOS.init();
+  }, 500);
   stopPreloader();
 
-  if(typePage == 'home') {
-    home()
+  if (typePage == "home") {
+    homePage();
   }
-}
+  if (typePage == "event") {
+    eventPage();
+  }
+  if (typePage == "empresa") {
+    empresaPage();
+  }
+};
+
+const empresaPage = () => {
+  function animarNumeros() {
+    const numeros = document.querySelectorAll(".numero");
+    numeros.forEach((numero) => {
+      const valorFinal = parseInt(numero.getAttribute("data-numero"));
+      const duracao = 2000;
+      const passo = (valorFinal / duracao) * 50;
+
+      let contador = 0;
+
+      const temporizador = setInterval(() => {
+        contador += passo;
+        numero.textContent = Math.floor(contador);
+
+        if (contador >= valorFinal) {
+          numero.textContent = valorFinal;
+          clearInterval(temporizador);
+        }
+      }, 50);
+    });
+  }
+
+  function verificarScroll() {
+    const numerosSection = document.querySelector(".numeros");
+    const numerosPosicao = numerosSection.getBoundingClientRect().top;
+
+    const alturaJanela = window.innerHeight;
+
+    if (numerosPosicao < alturaJanela) {
+      animarNumeros();
+      window.removeEventListener("scroll", verificarScroll);
+    }
+  }
+
+  window.addEventListener("scroll", verificarScroll);
+};
+
+const eventPage = () => {
+  $("body").css("background", "#eee");
+  $(".redirect-link").on("click", function (event) {
+    event.preventDefault();
+    window.location.hash = $(this).attr("href");
+  });
+  if (window.location.hash) {
+    const targetId = window.location.hash.substring(1);
+    window.location.hash = 0;
+    window.location.hash = targetId;
+  }
+  loadEventPage();
+};
 
 // Função que contém o código JS utilizado na página home
-const home = () => {
+const homePage = () => {
+  // Tudo relacionado ao modal do video
+  $(".redirect-link").on("click", function (event) {
+    event.preventDefault();
+    window.location.hash = $(this).attr("href");
+  });
+  if (window.location.hash) {
+    const targetId = window.location.hash.substring(1);
+    window.location.hash = 0;
+    window.location.hash = targetId;
+  }
+
+  if (!window.location.hash) {
+    $("#videoModal").fadeIn(0, function () {
+      $("#videoModal").css("visibility", "hidden");
+      $(".modal-content").addClass("active");
+    });
+  }
+  $("#closeBtn").click(function () {
+    $(".modal-content").removeClass("active");
+    $("#videoModal").fadeOut(500, function () {
+      $("#popupVideo")[0].pause();
+    });
+  });
+  $("#videoModal").click(function (event) {
+    if (event.target !== this) return;
+    $(".modal-content").removeClass("active");
+    $("#videoModal").fadeOut(500, function () {
+      $("#popupVideo")[0].pause();
+    });
+  });
+
+  $(".modal-content").click(function (event) {
+    event.stopPropagation();
+  });
+
+  const video = $("#popupVideo")[0];
+
+  $("#popupVideo").on("dblclick", function () {
+    if (video.muted) {
+      video.muted = false;
+    } else {
+      video.muted = true;
+    }
+  });
+
+  video.addEventListener("play", function () {
+    $("#videoModal").css("visibility", "visible");
+  });
 
   // Inicia o carousel que contém os eventos
   $("#eventsSlider").slick({
@@ -72,7 +180,7 @@ const home = () => {
           slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 3000,
-          dots: true
+          dots: true,
         },
       },
       {
@@ -82,7 +190,7 @@ const home = () => {
           slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 3000,
-          dots: true
+          dots: true,
         },
       },
       {
@@ -94,7 +202,7 @@ const home = () => {
           autoplaySpeed: 3000,
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
+          dots: true,
         },
       },
     ],
@@ -177,3 +285,49 @@ const home = () => {
     },
   });
 };
+
+// Função responsável por chamar os dados de um evento especifico e apresenta-lo na página event
+async function loadEventPage() {
+  await $.get("./src/js/eventos.json", function (data) {
+    var event;
+    data.forEach((evento) => {
+      if (window.location.pathname === "/" + evento.slug_ev) {
+        event = evento;
+      }
+    });
+    var imagesEvent = [];
+    $.get("./src/js/imagens_ev.json", function (imgsEv) {
+      imgsEv.forEach((imgEv) => {
+        if (imgEv.fk == event.id_ev) {
+          imagesEvent.push({
+            img_p: imgEv.img_p,
+            img_g: imgEv.img_g,
+          });
+        }
+      });
+      for (let i = 0; i < imagesEvent.length; i++) {
+        const element = `
+            <div class="col-md-4 gallery-item p-3">
+              <a
+                class="venobox"
+                data-gall="gallery"
+                href="./src/assets/img/eventos/${imagesEvent[i].img_g}.jpg"
+              >
+                <img src="./src/assets/img/eventos/${imagesEvent[i].img_p}.jpg"/>
+              </a>
+            </div>`;
+        $("#gallery-container").append(element);
+      }
+      $("#title-gallery-event").empty();
+      $("#title-gallery-event").append(`${event.nome_ev}`);
+      $("#description-gallery-event").empty();
+      $("#description-gallery-event").append(`${event.descricao_ev}`);
+      $(".venobox").venobox({
+        titleattr: "data-title",
+        numeratio: true,
+        infinigall: true,
+        spinner: "rotating-plane",
+      });
+    });
+  });
+}

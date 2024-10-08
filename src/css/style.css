@@ -97,6 +97,10 @@
   font-display: swap;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* Estilo para limpar todos estilos defaults de um botão */
 .btn-clear {
   border: none;
@@ -497,6 +501,156 @@
   display: block;
   position: relative;
   min-height: 47.5rem;
+  background: url(../img/homeBg/bg-footer.jpg);
+  background-image: linear-gradient(
+      to right,
+      #1d1d1d 0%,
+      rgba(29, 29, 29, 0.5) 100%
+    ),
+    url(../img/homeBg/bg-footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
+}
+
+#Footer .container-fluid {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 25px !important;
+}
+
+#Footer .general-section--py {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#Footer .general-section--pb {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+}
+
+#Footer .general-section--py > div {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -17px;
+}
+
+#Footer .general-section--py div div:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+#Footer .general-section--py div div:first-child .info {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+#Footer .general-section--py div div:first-child .info .adress {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+#Footer .general-section--py div div:first-child .info .address p a {
+  color: #979797;
+  text-decoration: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+#Footer .general-section--py div div:nth-child(2) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+
+#Footer .general-section--py div div:last-child {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+  text-align: right !important;
+}
+
+/* 
+#Footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  min-height: 47.5rem;
   background: url("../assets/img/homeBg/bg-footer.jpg");
   background-image: linear-gradient(
       to right,
@@ -769,13 +923,10 @@
 .general-section--py {
   padding-top: 80px;
   padding-bottom: 80px;
+  text-align: left;
 }
 
 #Footer input {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: inherit;
-  display: block;
   width: 100%;
   height: 2.1875rem;
   padding: 0.5rem 0;
@@ -783,22 +934,18 @@
   font-weight: 400;
   line-height: 1.5;
   background-color: transparent;
-  background-clip: padding-box;
   border-radius: 0;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border: none;
   border-bottom: 1px solid #979797;
   color: #979797;
-  outline: none;
+}
+
+#Footer input:focus {
+  box-shadow: none;
+  border: none;
 }
 
 #Footer select {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: inherit;
-  text-transform: none;
-  word-wrap: normal;
-  display: block;
   width: 100%;
   height: 2.1875rem;
   padding: 0.5rem 0;
@@ -806,33 +953,31 @@
   font-weight: 400;
   line-height: 1.5;
   background-color: transparent;
-  background-clip: padding-box;
   border-radius: 0;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border: none;
   border-bottom: 1px solid #979797;
   color: #979797;
 }
+#Footer select:focus {
+  box-shadow: none;
+  border: none;
+}
 #Footer textarea {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: inherit;
-  overflow: auto;
-  resize: vertical;
-  display: block;
   width: 100%;
   padding: 0.5rem 0;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   background-color: transparent;
-  background-clip: padding-box;
   border-radius: 0;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   height: auto;
   border: none;
   border-bottom: 1px solid #979797;
   color: #979797;
+}
+#Footer textarea:focus {
+  box-shadow: none;
+  border: none;
 }
 #Footer fieldset {
   font-family: "Montserrat", sans-serif;
@@ -848,8 +993,91 @@
   border: 0;
   resize: none;
 }
+#Footer fieldset:focus {
+  box-shadow: none;
+  border: none;
+}
+.form-control::placeholder {
+  color: #979797;
+}
 
+.message {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.hidden {
+  display: none;
+}
+#Footer .btn-enviar {
+box-sizing: border-box;
+margin: 0;
+overflow: visible;
+text-transform: none;
+display: inline-block;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+user-select: none;
+border: 1px solid transparent;
+padding: 0.5rem 1.875rem;
+font-size: 0.875rem;
+line-height: 1.5;
+border-radius: 24px;
+font-family: "Bree-Light";
+transition: 0.3s;
+cursor: pointer;
+background: transparent !important;
+background-color: transparent !important;
+border-color: #979797 !important;
+color: #979797 !important;
+box-shadow: none !important;
+}
+
+
+#Footer form .form-actions {
+  text-align: right;
+  margin-top: 65px;
+} */
 /* HOME PAGE - estilos */
+
+/* Video Modal */
+#videoModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 800px;
+  transform: translateY(-200%);
+  transition: transform 0.75s ease;
+  background: #026338;
+  box-shadow: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal-content.active {
+  transform: translateY(0);
+}
 
 /* Swiper Slider - Hero Slider */
 .swiper-container {
@@ -1366,4 +1594,666 @@
 
 .instagram-photos .text-secondary {
   color: #026338 !important;
+}
+
+/* Galeria do Evento - Estilos */
+#gallery-container::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+#gallery-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #e4e4e4;
+  border-radius: 5px;
+}
+#gallery-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#gallery-container::-webkit-scrollbar-thumb {
+  background-color: #9c9c9c;
+  border-radius: 5px;
+}
+.description h1 {
+  font-size: 2.5rem !important;
+  text-align: center;
+}
+.description h2 {
+  font-family: "Bree-Bold";
+  font-weight: 700;
+  color: #026338;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  resize: none;
+  line-height: calc(2.25rem + 4px) !important;
+  font-size: 1.5rem !important;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.description h2::before {
+  content: "";
+  width: 250px;
+  height: 2.5px;
+  position: absolute;
+  top: 2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #026338;
+  border: #026338 solid 1px;
+  border-radius: 5px;
+}
+.description p {
+  color: #111;
+  font-size: 1rem !important;
+  text-align: justify;
+}
+.gallery-item {
+  padding: 5px;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+.vbox-container {
+  overflow: visible;
+}
+.vbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  height: auto;
+  width: auto;
+}
+
+#title-gallery-event {
+  box-sizing: border-box;
+  font-family: "Bree-Bold";
+  font-weight: 700;
+  color: #026338;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  resize: none;
+  line-height: calc(4.5rem + 4px) !important;
+  font-size: 2.5rem !important;
+  text-align: center;
+  pointer-events: auto;
+  transition-duration: 1.2s;
+  transition-timing-function: ease;
+  transition-property: opacity, transform, -webkit-transform;
+  opacity: 1;
+  transform: none;
+  text-transform: uppercase;
+}
+
+#description-gallery-event {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  resize: none;
+  color: #111;
+  font-size: 1rem !important;
+  text-align: justify;
+  pointer-events: auto;
+  transition-duration: 1.2s;
+  transition-timing-function: ease;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-delay: 0.2s;
+  opacity: 1;
+  transform: none;
+  width: 80%;
+}
+
+/* Estilos da página de empresa */
+.empresa .video-bg h1 {
+  text-align: left;
+  box-sizing: border-box;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  resize: none;
+  line-height: calc(4.5rem + 4px) !important;
+  font-size: 3rem !important;
+  margin-bottom: 10px;
+  color: #026338;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.empresa .texture-background {
+  background: url("../assets/img/Banners/textura_background_4percent.jpeg.jpg");
+  background-color: rgba(255, 255, 255, 0.096);
+  background-position: center;
+  background-size: cover;
+}
+
+.empresa .video-bg {
+  position: relative;
+  background: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.empresa .video-bg video {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.empresa .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(255, 255, 255, 0.904) 35%,
+    rgba(255, 255, 255, 0) 55%
+  );
+
+  color: #1d1d1d;
+  text-align: left;
+  /* Alinhamento à esquerda */
+  padding-left: 25px;
+  /* Espaçamento à esquerda */
+  padding-top: 25px;
+}
+
+.empresa .overlay-content {
+  margin-top: 100px;
+  height: 100%;
+  width: 390px;
+}
+
+.empresa .overlay-content h1 {
+  font-size: 3rem !important;
+  margin-bottom: 10px;
+  color: #026338;
+}
+
+.empresa .overlay-content p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.empresa .arrow {
+  background: #026338;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.empresa .arrow-container {
+  animation: arrow-up-down 0.875s infinite ease-in-out;
+  position: relative;
+  bottom: -100px;
+  left: 200px;
+  transform: translateX(-50%);
+}
+
+@keyframes arrow-up-down {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      /* Começa com branco */ rgba(255, 255, 255, 1) 5%,
+      /* Mantém branco até 20% */ rgba(255, 255, 255, 0.904) 20%,
+      /* Transição suave para transparência */ rgba(255, 255, 255, 0) 50%
+        /* Fica completamente transparente */
+    );
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      /* Começa com branco */ rgba(255, 255, 255, 1) 5%,
+      /* Mantém branco até 20% */ rgba(255, 255, 255, 0.904) 25%,
+      /* Transição suave para transparência */ rgba(255, 255, 255, 0) 55%
+        /* Fica completamente transparente */
+    );
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      /* Começa com branco */ rgba(255, 255, 255, 1) 5%,
+      /* Mantém branco até 20% */ rgba(255, 255, 255, 0.904) 30%,
+      /* Transição suave para transparência */ rgba(255, 255, 255, 0) 60%
+        /* Fica completamente transparente */
+    );
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    background: #00000067;
+    text-align: center;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .overlay-content {
+    width: 70%;
+  }
+
+  .video-bg video {
+    left: 0;
+  }
+
+  .overlay-content h1,
+  .overlay-content p {
+    text-shadow: 0.25px 0.25px 2px #000000;
+  }
+
+  .overlay-content p {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    color: #fff;
+  }
+
+  .arrow-container {
+    left: 0%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .overlay-content p {
+    font-size: 0.9rem !important;
+  }
+
+  .overlay-content h1 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Estilos da seção de Números */
+.empresa .numeros {
+  padding: 25px 50px;
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+.empresa .numeros .numero {
+  font-size: 2.5rem;
+}
+
+.empresa .timeline {
+  padding: 25px;
+}
+
+.empresa .timeline h2 {
+  text-align: center;
+  color: #026338;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.empresa .timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+.empresa .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: solid #026338 2px;
+  border-radius: 50%;
+}
+
+.empresa .timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  width: 2px;
+  height: 100%;
+  background: #026338;
+}
+
+.empresa .timeline-year {
+  font-weight: bold;
+  color: #026338;
+}
+
+.empresa .timeline-content {
+  margin-top: 5px;
+  color: #333;
+}
+
+.empresa .equipamentosSection {
+  width: 100%;
+  gap: 10px;
+  padding: 50px;
+}
+
+.empresa .equipamentosSection p {
+  width: 600px;
+  text-align: justify;
+}
+
+.empresa .equipamentosSection h2,
+.empresa .equipamentosSection p,
+.empresa .numeros p,
+.empresa .numeros h2 {
+  font-family: "Poppins", sans-serif !important;
+}
+
+@media screen and (max-width: 768px) {
+  .empresa .equipamentosSection p {
+    width: 100%;
+  }
+
+  .numeros {
+    padding: 25px 25px;
+  }
+
+  .numeros .numero {
+    font-size: 1.5rem;
+  }
+
+  .equipamentosSection h2 {
+    text-align: center;
+  }
+}
+
+.empresa .equipamentosSection h2 {
+  font-size: 3.5rem !important;
+}
+
+.empresa .equipamentosSection p {
+  font-size: 1.2rem !important;
+}
+
+.empresa .numeros h2 {
+  font-size: 3.5rem !important;
+}
+
+.empresa .numeros p {
+  font-size: 1.2rem !important;
+}
+
+.empresa h1,
+h2 {
+  text-align: left;
+  box-sizing: border-box;
+  font-weight: 700;
+  line-height: calc(4.5rem + 4px) !important;
+  font-size: 3rem !important;
+  margin-bottom: 10px;
+  color: #026338;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos da página de logistica */
+.logistica .title-logistica {
+  font-size: 3.5rem !important;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.logistica .image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.logistica .text-map {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 599px) {
+  .logistica .image-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .logistica .img-num {
+    padding: 0;
+  }
+}
+.logistica .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.logistica .image-container .overlay-text {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 5px 10px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  border-radius: 3px;
+}
+
+.logistica .frotas {
+  width: 100%;
+  margin-top: 40px;
+  max-height: 25%;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.507) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.logistica .frotas div {
+  position: relative;
+}
+
+.logistica .frotas div p {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff;
+}
+
+.logistica .overlay-content {
+  margin-top: 100px;
+  height: 100%;
+}
+
+.logistica .overlay-content h1 {
+  font-size: 3rem !important;
+  margin-bottom: 10px;
+  color: #026338;
+}
+
+.logistica .overlay-content p {
+  font-size: 1rem;
+  text-align: justify;
+  width: 400px;
+}
+
+.logistica .arrow {
+  background: #026338;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.logistica .arrow-container {
+  animation: arrow-up-down 0.875s infinite ease-in-out;
+  position: relative;
+  margin-top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes arrow-up-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logistica .overlay {
+    background: #00000067;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .logistica .video-bg video {
+    left: 0;
+  }
+
+  .logistica .overlay-content h1,
+  .logistica .overlay-content p {
+    text-shadow: 1px 1px 2px #000000;
+  }
+
+  .logistica .overlay-content p {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .logistica .overlay-content p {
+    font-size: 0.9rem !important;
+  }
+  .logistica .overlay-content h1 {
+    font-size: 2rem !important;
+  }
+}
+
+.logistica .title-logistica {
+  position: relative;
+}
+
+@media screen and (min-width: 865px) {
+  .logistica .title-logistica::before {
+    content: "";
+    width: 250px;
+    height: 2.5px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #026338;
+    border: #026338 solid 1px;
+    border-radius: 5px;
+  }
+}
+
+.logistica .frota-text-container {
+  padding: 100px 75px 0px;
+  gap: 40px;
+  color: #fff;
+  text-shadow: 0.5px 0.5px 1px #000000;
+}
+.logistica .map-text-container {
+  padding: 30px 75px 0px;
+  gap: 40px;
+}
+
+@media (max-width: 700px) {
+  .logistica .text-map {
+    font-size: 1.1rem;
+  }
+  .logistica .title-logistica {
+    font-size: 2.5rem !important;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  .logistica .frota-text-container {
+    padding: 100px 25px 0px;
+    gap: 10px;
+  }
+  .logistica .texture-background {
+    background: url("assets/img/Banners/textura_background_4percent.jpeg.jpg");
+    background-color: rgba(255, 255, 255, 0.096);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .logistica .map-text-container {
+    padding: 30px 25px 0px;
+    background-image: url("assets/img/Banners/textura_background_4percent.jpeg.jpg");
+    gap: 40px;
+  }
+}
+.logistica .top-background {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0.41220238095238093) 41%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.logistica h1, h2 {
+  font-family: "Bree-Bold";
+  font-weight: 700;
+  color: #026338;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  resize: none;
+  line-height: calc(4.5rem + 4px) !important;
+  text-align: center !important;
+  font-size: 3.5rem !important;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  position: relative;
+  pointer-events: auto;
+  transition-timing-function: ease;
+  transition-duration: .5s;
+  transition-property: opacity,transform,-webkit-transform;
+  transition-delay: .1s;
+  opacity: 1;
+  transform: none;
 }
